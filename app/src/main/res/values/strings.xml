@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">LacysProject</string>
+    <string name="app_name">LACYS</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_share">Share</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="title_activity_mens">Mens</string>
+    <string name="title_activity_womens">WomensActivity</string>
+    <string name="title_activity_kids">KidsActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint">Search for clothes</string>
+    <string name="title_activity_mens_fragment">MensFragment</string>
 
 </resources>
