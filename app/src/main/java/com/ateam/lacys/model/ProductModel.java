@@ -9,7 +9,7 @@ public class ProductModel {
     private String brand;
     private String category_id;
     private String desc;
-    private double price;
+    private String price;
     private int inStock;
     private byte[] img;
 
@@ -17,7 +17,7 @@ public class ProductModel {
 
     }
 
-    public ProductModel(int id,String brand,String category_id,String desc,double price,int inStock,byte[] img){
+    public ProductModel(int id,String brand,String category_id,String desc,String price,int inStock,byte[] img){
         this.id = id;
         this.brand = brand;
         this.category_id = category_id;
@@ -59,11 +59,11 @@ public class ProductModel {
         this.desc = desc;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -81,5 +81,12 @@ public class ProductModel {
 
     public void setImg(byte[] img) {
         this.img = img;
+    }
+
+    @Override
+    public String toString() {
+
+        return super.toString();
+
     }
 }

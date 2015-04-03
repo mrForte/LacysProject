@@ -16,15 +16,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.ateam.lacys.R;
 import com.ateam.lacys.adapter.CategoryAdapter;
 import com.ateam.lacys.fragment.AccountFragment;
+import com.ateam.lacys.fragment.BagDialogFragment;
 import com.ateam.lacys.fragment.HomeFragment;
 import com.ateam.lacys.fragment.KidsFragment;
 import com.ateam.lacys.fragment.MensFragment;
 import com.ateam.lacys.fragment.ShareFragment;
 import com.ateam.lacys.fragment.WomensFragment;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -65,16 +70,13 @@ public class MainActivity extends ActionBarActivity {
         fragmentTransaction.add(R.id.container, home, "Home");
         fragmentTransaction.commit();
 
-        /* Assinging the toolbar object ot the view
+        /* Assinging the toolbar object to the view
             and setting the the Action bar to our toolbar*/
 
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.RecyclerView); // Assigning the RecyclerView Object to the xml View
-
-        //LinearLayoutManager laymanager = new LinearLayoutManager(this);
-        //mRecyclerView.setLayoutManager(laymanager);
 
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, null));
         mRecyclerView.setHasFixedSize(true);                            // Letting the system know that the list objects are of fixed size
@@ -84,7 +86,7 @@ public class MainActivity extends ActionBarActivity {
         // And passing the titles,icons,header view name, header view email,
         // and header view profile picture
 
-        mRecyclerView.setAdapter(mAdapter);                              // Setting the adapter to RecyclerView
+        mRecyclerView.setAdapter(mAdapter); // Setting the adapter to RecyclerView
 
         final GestureDetector mGestureDetector = new GestureDetector(MainActivity.this, new GestureDetector.SimpleOnGestureListener() {
 
@@ -99,10 +101,18 @@ public class MainActivity extends ActionBarActivity {
             public boolean onInterceptTouchEvent(RecyclerView recyclerView, MotionEvent motionEvent) {
                 View child = recyclerView.findChildViewUnder(motionEvent.getX(), motionEvent.getY());
 
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
                 if (child != null && mGestureDetector.onTouchEvent(motionEvent)) {
                     Drawer.closeDrawers();
                     int position = recyclerView.getChildPosition(child);
                     Context context = child.getContext();
+
+                    HomeFragment home = new HomeFragment();
+                    fragmentTransaction.add(R.id.container, home, "Home");
+                    fragmentTransaction.remove(home);
+
                     retrievePosition(child, position);
                     return true;
                 }
@@ -143,8 +153,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+       getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -170,35 +179,42 @@ public class MainActivity extends ActionBarActivity {
         switch (position) {
             case 1:
                 HomeFragment home = new HomeFragment();
-                fragmentTransaction.add(R.id.container, home, "Home");
+                fragmentTransaction.replace(R.id.container,home);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case 2:
                 MensFragment mens = new MensFragment();
-                fragmentTransaction.add(R.id.container, mens, "Mens");
+                fragmentTransaction.replace(R.id.container,mens);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case 3:
                 WomensFragment womens = new WomensFragment();
-                fragmentTransaction.add(R.id.container, womens, "Womens");
+                fragmentTransaction.replace(R.id.container,womens);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case 4:
                 KidsFragment kids = new KidsFragment();
-                fragmentTransaction.add(R.id.container, kids, "Kids");
+                fragmentTransaction.replace(R.id.container,kids);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case 5:
                 AccountFragment account = new AccountFragment();
-                fragmentTransaction.add(R.id.container, account, "Accounts");
+                fragmentTransaction.replace(R.id.container,account);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case 6:
                 ShareFragment share = new ShareFragment();
-                fragmentTransaction.add(R.id.container, share, "Share");
+                fragmentTransaction.replace(R.id.container,share);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
         }
 
     }
+
 }

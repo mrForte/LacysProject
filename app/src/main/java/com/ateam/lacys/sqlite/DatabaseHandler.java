@@ -3,9 +3,7 @@ package com.ateam.lacys.sqlite;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.ateam.lacys.model.ProductModel;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -66,7 +64,7 @@ public class DatabaseHandler {
                 byte[] blob = cursor.getBlob(cursor.getColumnIndex("Product_Image"));
                 productModel.setImg(blob);
                 productModel.setDesc(cursor.getString(6));
-                productModel.setPrice(7);
+                productModel.setPrice(cursor.getString(7));
 				productArray.add(productModel);
 			}while(cursor.moveToNext());
 
