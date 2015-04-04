@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-bdbad247408db7e3d8ea500a94665388ad6c6a73.jar" />
-    </item>
-    <item
-        jar="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-49758ae00408810b910dd33db2de6a808fd2d854.jar" />
-    </item>
-    <item
-        jar="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-59cf10178696aa9ab387a20fab66766f7ed24bc0.jar" />
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-b8c5330afbe614421b069f920f15b41787ced25f.jar" />
     </item>
     <item
-        jar="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jar="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-5fc21a929b3e639149f33c7c9482f0ad31901797.jar" />
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-0dddf13d16eb3372e5732c8362e05243bcc62194.jar" />
     </item>
     <item
-        jar="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-412555a5b76d911bee3ee15c9a73592a9f341892.jar" />
-    </item>
-    <item
-        jar="C:\Users\Gary\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\Matt\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-8b3300b36c1143fa72a080d2db30539e6b954a84.jar" />
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-d7af88883f8983d994a4ce3b384d34a54c51f9a2.jar" />
     </item>
     <item
-        jar="C:\Users\Gary\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
+        jar="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-e15f086ec9a271993b5cd2bb9930358749dc9d0a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-0a9682caf718e312457ed9d6de017d391d25a89e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matt\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
-        <dex dex="C:\Users\Gary\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1-209d8a976e0b21cfc0a295bcec3c875059bd9603.jar" />
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1-2d2be2cf3bd9e5a88436cc695075caa7a5080746.jar" />
+    </item>
+    <item
+        jar="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="00b0b7233e1ec64acebfac40d4983d32d4712426">
+        <dex dex="C:\Users\Matt\AndroidStudioProjects\LacysProject\app\build\intermediates\pre-dexed\debug\classes-dc816db0d19893eb072c36da1383396c61a414ff.jar" />
     </item>
 
 </items>

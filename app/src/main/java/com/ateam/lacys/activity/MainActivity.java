@@ -43,7 +43,8 @@ public class MainActivity extends ActionBarActivity {
     boolean drawerIsOpen = false;
 
     //Similarly we Create a String Resource for the name and email in the header view
-    //And we also create a int resource for profile picture in the header view
+    //And we also create a int resource for profile picture in the header
+    //This is a new comment
 
     String NAME = "LACYS";
     String SLOGAN = "Start Shopping Now, Hot Deals!";
