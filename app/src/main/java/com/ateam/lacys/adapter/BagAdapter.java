@@ -23,13 +23,13 @@ import java.util.List;
 /**
  * Created by Gary on 3/28/2015.
  */
-public class BagAdapter extends BaseAdapter{
+public class BagAdapter extends BaseAdapter {
 
     private Context context;
-    private static List<ProductModel> list;
+    private List<ProductModel> list;
     LayoutInflater inflater;
 
-    public BagAdapter(Context context, List<ProductModel> list){
+    public BagAdapter(Context context, List<ProductModel> list) {
         this.context = context;
         this.list = list;
         inflater = LayoutInflater.from(this.context);        // only context can also be used
@@ -54,41 +54,37 @@ public class BagAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
 
         BagViewHolder bViewHolder;
-        if(convertView == null) {
+        if (convertView == null) {
             convertView = inflater.inflate(R.layout.bag_item, null);
             bViewHolder = new BagViewHolder();
 
             //bViewHolder.id = (TextView)convertView.findViewById(R.id.bagId);
-            bViewHolder.brand = (TextView)convertView.findViewById(R.id.textBrand);
-            bViewHolder.desc = (TextView)convertView.findViewById(R.id.textDesc);
-            bViewHolder.price = (TextView)convertView.findViewById(R.id.textPrice);
-            bViewHolder.inStock = (TextView)convertView.findViewById(R.id.textViewInStock);
-            bViewHolder.img = (ImageView)convertView.findViewById(R.id.bagImage);
+            bViewHolder.brand = (TextView) convertView.findViewById(R.id.textBrand);
+            bViewHolder.desc = (TextView) convertView.findViewById(R.id.textDesc);
+            bViewHolder.price = (TextView) convertView.findViewById(R.id.textPrice);
+            //bViewHolder.inStock = (TextView) convertView.findViewById(R.id.textViewInStock);
+            bViewHolder.img = (ImageView) convertView.findViewById(R.id.bagImage);
 
             convertView.setTag(bViewHolder);
         } else {
             bViewHolder = (BagViewHolder) convertView.getTag();
         }
 
-        //bViewHolder.id.setText(list.get(0).getBrand());
-        for(int i=0;i<list.size();i++) {
+        bViewHolder.brand.setText(list.get(position).getBrand());
+        bViewHolder.desc.setText(list.get(position).getDesc());
+        bViewHolder.price.setText("Price $" + list.get(position).getPrice());
+        //bViewHolder.inStock.setText("In-Stock " + Integer.toString(list.get(position).getInStock()));
 
-            bViewHolder.brand.setText(list.get(i).getBrand());
-            bViewHolder.desc.setText(list.get(i).getDesc());
-            bViewHolder.price.setText("Price $" + list.get(i).getPrice());
-            bViewHolder.inStock.setText("In-Stock " + Integer.toString(list.get(i).getInStock()));
+        byte[] outImage = list.get(position).getImg();
+        ByteArrayInputStream imageStream = new ByteArrayInputStream(outImage);
+        Bitmap theImage = BitmapFactory.decodeStream(imageStream);
+        bViewHolder.img.setImageBitmap(theImage);
 
-            byte[] outImage = list.get(i).getImg();
-            ByteArrayInputStream imageStream = new ByteArrayInputStream(outImage);
-            Bitmap theImage = BitmapFactory.decodeStream(imageStream);
-            bViewHolder.img.setImageBitmap(theImage);
-
-        }
         return convertView;
     }
 
-    private class BagViewHolder{
+    private class BagViewHolder {
         ImageView img;
-        TextView id,brand,desc,price,inStock;
+        TextView id, brand, desc, price, inStock;
     }
 }
